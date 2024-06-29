@@ -44,11 +44,10 @@ Diagrams:
 
 Current Progress
 
-	1.	User Registration and Login: Basic authentication system is implemented.
-	2.	Service Listings: Initial setup of service listings with descriptions and prices.
-	3.	Booking System: Basic booking form is created.
-	4.	User Dashboard: Initial version of the dashboard to view and manage bookings.
-	5.	Review System: Basic functionality for users to leave feedback on services.
+	1.	Service Listings: Initial setup of service listings with descriptions and prices.
+	2.	Booking System: Basic booking form is created.
+	3.	User Dashboard: Initial version of the dashboard to view and manage bookings.
+	4.	Review System: Basic functionality for users to leave feedback on services.
 
 Next Steps
 
@@ -57,3 +56,4 @@ Next Steps
 	3.	Implement Payment Gateway: Set up a secure payment system for booking services.
 	4.	Optimize Booking System: Improve the booking form and ensure it handles various edge cases.
 	5.	Enhance Review System: Add features to allow users to rate and review services more comprehensively.
+ 	6.	User Registration and Login: Basic authentication system is implemented.
