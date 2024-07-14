@@ -1,6 +1,6 @@
 # Project Name: Lawn Care Website
 
-Description: The Lawn Care Website is for a friend and his business. The site provides users with a platform to find and book lawn care services. Users can browse available services, read reviews, book appointments, and manage their lawn care schedules. The website can be viewed at rmartinez52.github.io
+Description: The Lawn Care Website is for a friend and his business. The site provides users with a platform to find and book lawn care services. Users can browse available services, read reviews, book appointments, and manage their lawn care schedules. The website can be viewed at (https://rmartinez52.github.io)
 
 Features:
 
