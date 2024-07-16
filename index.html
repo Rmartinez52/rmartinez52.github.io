@@ -3,58 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GottaGo Mow</title>
+    <title>CARILLO LAWN & LANDSCAPING</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Lawn Care Services</h1>
-        <nav>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <img src="images/logo.jpg" alt="Business Logo" id="logo">
+        <div class="contact-info">
+            <p>Call Today: <a href="tel:8129463364">(812) 946-3364</a></p>
+            <a href="#payment" class="btn">Make a Payment</a>
+        </div>
     </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Client Login</a></li>
+        </ul>
+    </nav>
     <section id="hero">
         <div class="hero-content">
-            <h2>Your Lawn Deserves the Best Care</h2>
-            <p>Transform your lawn into a beautiful oasis with our expert lawn care services.</p>
-            <a href="#services" class="btn">View Services</a>
+            <h1>WELCOME TO CARILLO LAWN CARE!</h1>
+            <p>Welcome to our Lawn Care Website! With over 10 years of experience in the lawn care industry, we pride ourselves on delivering top-notch services to keep your lawn looking its best all year round. Our team of skilled professionals is dedicated to providing personalized care tailored to the unique needs of each lawn we service. We understand that a well-maintained lawn enhances the beauty and value of your property. That’s why we offer a comprehensive range of services, including mowing, edging, fertilization, weed control, and more. Our commitment to quality and customer satisfaction has earned us numerous references and a loyal customer base.</p>
+        </div>
+        <div class="estimate-form">
+            <h2>Request an Estimate</h2>
+            <form action="submit.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+                <label for="zip">Zip Code:</label>
+                <input type="text" id="zip" name="zip" required>
+                <label for="service">Type of Service:</label>
+                <select id="service" name="service" required>
+                    <option value="lawn">Lawn Care</option>
+                    <option value="landscape">Landscape Design</option>
+                </select>
+                <button type="submit" class="btn">Send</button>
+            </form>
         </div>
     </section>
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service">
-            <h3>Lawn Mowing</h3>
-            <p>We offer regular lawn mowing services to keep your grass healthy and well-groomed.</p>
-        </div>
-        <div class="service">
-            <h3>Fertilization</h3>
-            <p>Our fertilization treatments ensure your lawn receives the nutrients it needs for lush growth.</p>
-        </div>
-        <!-- Add more services as needed -->
-    </section>
+
     <section id="about">
-        <h2>About Us</h2>
-        <p>We are a dedicated team of lawn care professionals committed to providing exceptional service and superior results.</p>
     </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Ready to transform your lawn? Contact us today for a free consultation.</p>
-        <form action="submit.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit" class="btn">Submit</button>
-        </form>
-    </section>
+
     <footer>
-        <p>&copy; 2024 Lawn Care Services. All rights reserved.</p>
+        <p>&copy; 2014 CARILLO LAWN & LANDSCAPING</p>
     </footer>
 </body>
 </html>
