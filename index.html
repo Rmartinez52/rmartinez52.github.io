@@ -5,67 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CARILLO LAWN & LANDSCAPING</title>
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <!-- <div class="contact-info">
+      <p>Call Today: <a href="tel:8129463364">(812) 946-3364</a></p>
+      <a href="#payment" class="btn">Make a Payment</a>
+    </div> -->
     <header>
-      <img src="img/logo.jpg" alt="Business Logo" id="logo" />
-      <!-- <div class="contact-info">
-        <p>Call Today: <a href="tel:8129463364">(812) 946-3364</a></p>
-        <a href="#payment" class="btn">Make a Payment</a>
-      </div> -->
+      <nav>
+        <a href="/" class="head-link">
+          <h1>CARILLO</h1>
+        </a>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="portfolio_Work.html">PORTFOLIO</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+      </nav>
     </header>
-    <nav>
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT US</a></li>
-        <li><a href="services.html">SERVICES</a></li>
-        <li><a href="portfolio_Work.html">PORTFOLIO</a></li>
-        <li><a href="contact.html">CONTACT US</a></li>
-      </ul>
-    </nav>
     <section id="hero">
       <div class="hero-content">
         <h1>WELCOME TO CARILLO LAWN CARE!</h1>
         <p>
           Welcome to our Lawn Care Website! With over 10 years of experience in
           the lawn care industry, we pride ourselves on delivering top-notch
-          services to keep your lawn looking its best all year round. Our team
-          of skilled professionals is dedicated to providing personalized care
-          tailored to the unique needs of each lawn we service. We understand
-          that a well-maintained lawn enhances the beauty and value of your
-          property. That’s why we offer a comprehensive range of services,
-          including mowing, edging, fertilization, weed control, and more. Our
-          commitment to quality and customer satisfaction has earned us numerous
-          references and a loyal customer base.
+          services to keep your lawn looking its best all year round.
         </p>
+      </div>
+    </section>
+    <div class="form-container">
+      <div>
+        <h1>Request an Estimate</h1>
+        <p>Message us and we'll get back to you as soon as possible!</p>
       </div>
       <div class="estimate-form">
         <h2>Request an Estimate</h2>
-        <form action="submit.php" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-          <label for="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone" required />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <label for="address">Address:</label>
-          <input type="text" id="address" name="address" required />
-          <label for="city">City:</label>
-          <input type="text" id="city" name="city" required />
-          <label for="state">State:</label>
-          <input type="text" id="state" name="state" required />
-          <label for="zip">Zip Code:</label>
-          <input type="text" id="zip" name="zip" required />
-          <label for="service">Type of Service:</label>
+        <form method="post">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Address"
+            required
+          />
+          <input
+            type="text"
+            id="state"
+            name="state"
+            placeholder="State"
+            required
+          />
+          <input
+            type="text"
+            id="zip"
+            name="zip"
+            placeholder="Zip Code"
+            required
+          />
           <select id="service" name="service" required>
+            <option value="type">Type of Service</option>
             <option value="lawn">Lawn Care</option>
             <option value="landscape">Landscape Design</option>
           </select>
           <button type="submit" class="btn">Send</button>
         </form>
       </div>
-    </section>
+    </div>
 
     <section id="about"></section>
 
