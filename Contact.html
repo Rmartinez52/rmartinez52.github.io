@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Lawn Care</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+      }
+      header {
+        background: #4caf50;
+        color: #fff;
+        padding-top: 30px;
+        min-height: 70px;
+        border-bottom: #4caf50 3px solid;
+      }
+      header h1 {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .contact-section {
+        padding: 20px 0;
+        text-align: center;
+      }
+      .contact-form {
+        background: #fff;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 0 10px #ccc;
+        text-align: left;
+      }
+      .contact-form label {
+        display: block;
+        margin: 10px 0 5px;
+      }
+      .contact-form input,
+      .contact-form textarea,
+      .contact-form select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 20px;
+        border: 1px solid #ccc;
+      }
+      .contact-form button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background: #4caf50;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      .contact-form button:hover {
+        background: #3d7e78;
+      }
+      footer {
+        background: #4caf50;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        background-color: #333;
+        margin: 0;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 0;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="portfolio_work.html">PORTFOLIO</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="contact-section">
+        <form class="contact-form" action="submit_form.php" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="services">Services of Interest</label>
+          <select id="services" name="services" required>
+            <option value="lawn-care">Lawn Care</option>
+            <option value="landscaping">Landscaping</option>
+          </select>
+
+          <label for="comments">Comments</label>
+          <textarea id="comments" name="comments" rows="5"></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2014 CARILLO LAWN & LANDSCAPING</p>
+    </footer>
+  </body>
+</html>
