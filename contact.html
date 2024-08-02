@@ -59,6 +59,7 @@
         border-radius: 8px;
         overflow: hidden;
         background-color: #f0f8f1;
+        min-width: 390px;
       }
 
       .selected-date {
@@ -142,6 +143,9 @@
       .ap-content {
         flex-grow: 1;
       }
+      .ap-content p {
+        padding-right: 24px;
+      }
       .book-button {
         display: none;
         padding: 10px;
@@ -176,17 +180,17 @@
     <div class="container">
       <div class="ap-container">
         <div class="ap-content">
-          <h1 class="book-h1">Book an appointment</h1>
+          <h1 class="book-h1">Book an Appointment</h1>
           <p>
-            Booking an appointment is easy and convenient—simply click the "Book
-            Now" button, and choose a time that works for you. Our flexible
+            Booking an appointment is easy and convenient—simply choose a time
+            that works for you, and click the "Book Now" button. Our flexible
             scheduling ensures that we can meet your needs promptly. Let us take
             care of your lawn, so you can enjoy a beautiful, healthy yard all
             year round. Schedule your appointment today and see the difference
             our personalized lawn care solutions can make!
           </p>
           <div class="selected-date" id="selectedDate">Selected Date: None</div>
-          <button class="book-button" id="book-btn">Book Appointment</button>
+          <button class="book-button" id="book-btn">Book Now</button>
         </div>
         <div class="calendar-container">
           <div id="staticCalendar"></div>
