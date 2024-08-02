@@ -81,13 +81,17 @@
         margin: 1px;
       }
 
-      .flatpickr-day.selected,
-      .flatpickr-day.today {
-        background-color: #3498db;
-        color: white;
-      }
       .flatpickr-day.today {
         background-color: #627472;
+      }
+
+      .flatpickr-day.selected {
+        background-color: #3498db;
+      }
+
+      .flatpickr-day.selected,
+      .flatpickr-day.today {
+        color: white;
       }
     </style>
   </head>
@@ -120,6 +124,7 @@
           flatpickr("#staticCalendar", {
             inline: true,
             dateFormat: "Y-m-d",
+            minDate: "today",
             onChange: function (selectedDates, dateStr, instance) {
               document.getElementById(
                 "selectedDate"
