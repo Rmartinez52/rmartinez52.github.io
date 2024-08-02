@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - Lawn Care</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
     <style>
       .container {
         width: 80%;
@@ -46,6 +51,44 @@
       .contact-form button:hover {
         background: #3d7e78;
       }
+      .calendar-container {
+        width: 300px;
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .selected-date {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      .flatpickr-calendar {
+        width: 100%;
+        border: none;
+      }
+
+      .flatpickr-day {
+        transition: all 0.5s;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        margin: 1px;
+      }
+
+      .flatpickr-day.selected,
+      .flatpickr-day.today {
+        background-color: #3498db;
+        color: white;
+      }
+      .flatpickr-day.today {
+        background-color: #627472;
+      }
     </style>
   </head>
   <body>
@@ -65,6 +108,26 @@
     </header>
 
     <div class="container">
+      <div>
+        <h1>Book an appointment</h1>
+        <div class="calendar-container">
+          <div id="staticCalendar"></div>
+        </div>
+        <div class="selected-date" id="selectedDate">Selected Date: None</div>
+
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script>
+          flatpickr("#staticCalendar", {
+            inline: true,
+            dateFormat: "Y-m-d",
+            onChange: function (selectedDates, dateStr, instance) {
+              document.getElementById(
+                "selectedDate"
+              ).textContent = `Selected Date: ${dateStr}`;
+            },
+          });
+        </script>
+      </div>
       <div class="contact-section">
         <form class="contact-form" action="submit_form.php" method="POST">
           <label for="name">Name</label>
