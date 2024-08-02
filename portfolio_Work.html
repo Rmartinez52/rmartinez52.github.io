@@ -29,7 +29,7 @@
         color: #4caf50;
       }
       .portfolio-item p {
-        text-align: left;
+        text-align: justify;
       }
 
       .slideshow-container {
@@ -81,6 +81,24 @@
         background-color: rgba(0, 67, 25, 0.9);
       }
 
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        text-align: center;
+        margin-top: 10px;
+        list-style: none;
+      }
+
+      .card {
+        background-color: #c0ffc5;
+        padding: 15px;
+        border-radius: 8px;
+        width: calc(33.333% - 20px);
+        min-width: 200px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
       @media only screen and (max-width: 300px) {
         .prev,
         .next {
@@ -118,11 +136,11 @@
             and attention to detail we bring to every project.
           </p>
           <h2>SERVICES PROVIDED</h2>
-          <ul>
-            <li>MOWING AND LAWN MAINTENANCE</li>
-            <li>FERTILIZATION AND WEED CONTROL</li>
-            <li>EDGING AND TRIMMING</li>
-            <li>AERATION AND SOIL HEALTH</li>
+          <ul class="card-container">
+            <li class="card">MOWING AND LAWN MAINTENANCE</li>
+            <li class="card">FERTILIZATION AND WEED CONTROL</li>
+            <li class="card">EDGING AND TRIMMING</li>
+            <li class="card">AERATION AND SOIL HEALTH</li>
           </ul>
         </div>
         <div class="portfolio-item slide">
@@ -136,11 +154,11 @@
             clients.
           </p>
           <h2>SERVICES PROVIDED</h2>
-          <ul>
-            <li>REGULAR LAWN MOWING</li>
-            <li>FERTILIZATION AND WEED CONTROL</li>
-            <li>EDGING AND TRIMMING</li>
-            <li>TREE CARE AND MULCHING</li>
+          <ul class="card-container">
+            <li class="card">REGULAR LAWN MOWING</li>
+            <li class="card">FERTILIZATION AND WEED CONTROL</li>
+            <li class="card">EDGING AND TRIMMING</li>
+            <li class="card">TREE CARE AND MULCHING</li>
           </ul>
         </div>
         <div class="portfolio-item slide">
@@ -153,11 +171,11 @@
             garden beds create a harmonious and inviting outdoor space.
           </p>
           <h2>SERVICES PROVIDED</h2>
-          <ul>
-            <li>MOWING AND LAWN MAINTENANCE</li>
-            <li>FERTILIZATION AND WEED CONTROL</li>
-            <li>EDGING AND TRIMMING</li>
-            <li>AERATION AND SOIL HEALTH</li>
+          <ul class="card-container">
+            <li class="card">MOWING AND LAWN MAINTENANCE</li>
+            <li class="card">FERTILIZATION AND WEED CONTROL</li>
+            <li class="card">EDGING AND TRIMMING</li>
+            <li class="card">AERATION AND SOIL HEALTH</li>
           </ul>
         </div>
         <div class="portfolio-item slide">
@@ -169,11 +187,11 @@
             results achieved, and any notable aspects of the project.
           </p>
           <h2>SERVICES PROVIDED</h2>
-          <ul>
-            <li>MOWING AND LAWN MAINTENANCE</li>
-            <li>FERTILIZATION AND WEED CONTROL</li>
-            <li>EDGING AND TRIMMING</li>
-            <li>AERATION AND SOIL HEALTH</li>
+          <ul class="card-container">
+            <li class="card">MOWING AND LAWN MAINTENANCE</li>
+            <li class="card">FERTILIZATION AND WEED CONTROL</li>
+            <li class="card">EDGING AND TRIMMING</li>
+            <li class="card">AERATION AND SOIL HEALTH</li>
           </ul>
         </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
