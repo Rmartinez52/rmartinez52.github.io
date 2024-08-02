@@ -12,14 +12,14 @@
 
     <style>
       .container {
-        padding: 30px 0;
+        padding-top: 30px;
         margin: auto;
         overflow: hidden;
       }
       .contact-section {
-        padding: 20px 0;
+        padding: 40px 0;
         text-align: center;
-        background-color: #66bb6a;
+        background-color: #acf3b0;
       }
       .contact-form {
         background: #fff;
@@ -27,9 +27,9 @@
         margin: 20px 0;
         box-shadow: 0 0 10px #ccc;
         text-align: left;
-
         max-width: 1100px;
         margin: auto;
+        border-radius: 18px;
       }
       .contact-form label {
         display: block;
@@ -139,6 +139,10 @@
         margin: 0;
       }
 
+      .contact-section .book-h1 {
+        margin-bottom: 15px;
+        color: #0e5512;
+      }
       .ap-container {
         display: flex;
         padding: 30px;
@@ -219,15 +223,29 @@
         </script>
       </div>
       <div class="contact-section">
+        <h1 class="book-h1">Contact Us</h1>
         <form class="contact-form" action="submit_form.php" method="POST">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Phone Number"
+            required
+          />
 
           <label for="services">Services of Interest</label>
           <select id="services" name="services" required>
