@@ -31,6 +31,58 @@
       .portfolio-item p {
         text-align: left;
       }
+
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      .slide {
+        display: none;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .slide img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+      }
+
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next {
+          font-size: 11px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -50,8 +102,8 @@
     </header>
 
     <div class="container">
-      <div class="portfolio-section">
-        <div class="portfolio-item">
+      <div class="portfolio-section slideshow-container">
+        <div class="portfolio-item slide">
           <img src="img/lawncare1.jpg" alt="Project 1" />
           <h2>LAWNCARE 1</h2>
           <p>
@@ -62,34 +114,14 @@
             and attention to detail we bring to every project.
           </p>
           <h2>SERVICES PROVIDED</h2>
-          <li>MOWING AND LAWN MAINTENANCE</li>
-          <p>
-            Our team performed regular mowing to ensure the grass remained at an
-            optimal height for health and aesthetics. The even, straight lines
-            indicate the use of advanced mowing techniques and equipment.
-          </p>
-          <li>FERTILIZATION AND WEED CONTROL</li>
-          <p>
-            To achieve the vibrant green color, we applied a balanced
-            fertilization program tailored to the specific needs of the lawn.
-            Additionally, weed control treatments were administered to prevent
-            unwanted growth and promote a uniform appearance.
-          </p>
-          <li>EDGING AND TRIMMING</li>
-          <p>
-            The edges of the lawn were meticulously trimmed to create a sharp,
-            clean boundary between the grass and adjacent surfaces. This
-            attention to detail enhances the overall visual appeal of the
-            property.
-          </p>
-          <li>AERATION AND SOIL HEALTH</li>
-          <p>
-            Aeration services were conducted to improve soil health and promote
-            deep root growth, ensuring the lawn remains resilient and lush
-            throughout the seasons.
-          </p>
+          <ul>
+            <li>MOWING AND LAWN MAINTENANCE</li>
+            <li>FERTILIZATION AND WEED CONTROL</li>
+            <li>EDGING AND TRIMMING</li>
+            <li>AERATION AND SOIL HEALTH</li>
+          </ul>
         </div>
-        <div class="portfolio-item">
+        <div class="portfolio-item slide">
           <img src="img/lawncare2.jpg" alt="Project 2" />
           <h2>LAWNCARE 2</h2>
           <p>
@@ -129,7 +161,7 @@
             the landscape.
           </p>
         </div>
-        <div class="portfolio-item">
+        <div class="portfolio-item slide">
           <img src="img/landscape1.jpg" alt="Project 3" />
           <h2>LANDSCAPE 1</h2>
           <p>
@@ -166,7 +198,7 @@
             throughout the seasons.
           </p>
         </div>
-        <div class="portfolio-item">
+        <div class="portfolio-item slide">
           <img src="img/landscape2.jpg" alt="Project 4" />
           <h2>LANDSCAPE 2</h2>
           <p>
@@ -203,7 +235,32 @@
           </p>
         </div>
       </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
 
     <footer>
       <p>&copy; 2014 CARILLO LAWN & LANDSCAPING</p>
