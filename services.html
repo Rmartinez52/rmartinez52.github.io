@@ -7,22 +7,40 @@
     <link rel="stylesheet" href="css/styles.css" />
     <style>
       .container {
-        width: 80%;
+        background-color: #4caf50;
         margin: auto;
         overflow: hidden;
+        padding: 30px;
       }
       .services-section {
         padding: 20px 0;
-        text-align: center;
       }
       .service {
         background: #fff;
-        padding: 20px;
+        padding: 40px;
         margin: 20px 0;
         box-shadow: 0 0 10px #ccc;
+        border-radius: 15px;
       }
       .service h2 {
+        margin: 0;
+        font-size: 30px;
         color: #4caf50;
+      }
+      .service-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .service-card {
+        background-color: #c0ffc5;
+        padding: 15px;
+        border-radius: 8px;
+        width: calc(33.333% - 20px);
+        min-width: 200px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
     </style>
   </head>
@@ -50,15 +68,15 @@
             We offer comprehensive lawn care services to keep your lawn healthy
             and green. Our services include:
           </p>
-          <ul>
-            <li>Mowing</li>
-            <li>Edging</li>
-            <li>Fertilization</li>
-            <li>Weed Control</li>
-            <li>Aeration</li>
-            <li>Overseeding</li>
-            <li>Pest Control</li>
-          </ul>
+          <div class="service-cards">
+            <div class="service-card">Mowing</div>
+            <div class="service-card">Edging</div>
+            <div class="service-card">Fertilization</div>
+            <div class="service-card">Weed Control</div>
+            <div class="service-card">Aeration</div>
+            <div class="service-card">Overseeding</div>
+            <div class="service-card">Pest Control</div>
+          </div>
         </div>
         <div class="service">
           <h2>Landscaping Services</h2>
@@ -66,15 +84,15 @@
             Transform your outdoor space with our expert landscaping services.
             Our offerings include:
           </p>
-          <ul>
-            <li>Landscape Design</li>
-            <li>Planting</li>
-            <li>Mulching</li>
-            <li>Tree and Shrub Care</li>
-            <li>Hardscaping</li>
-            <li>Garden Maintenance</li>
-            <li>Seasonal Cleanup</li>
-          </ul>
+          <div class="service-cards">
+            <div class="service-card">Landscape Design</div>
+            <div class="service-card">Planting</div>
+            <div class="service-card">Mulching</div>
+            <div class="service-card">Tree and Shrub Care</div>
+            <div class="service-card">Hardscaping</div>
+            <div class="service-card">Garden Maintenance</div>
+            <div class="service-card">Seasonal Cleanup</div>
+          </div>
         </div>
       </div>
     </div>
