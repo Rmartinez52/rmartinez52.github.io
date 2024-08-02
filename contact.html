@@ -246,15 +246,17 @@
             placeholder="Phone Number"
             required
           />
-
-          <label for="services">Services of Interest</label>
           <select id="services" name="services" required>
+            <option value="services">Services of Interest</option>
             <option value="lawn-care">Lawn Care</option>
             <option value="landscaping">Landscaping</option>
           </select>
-
-          <label for="comments">Comments</label>
-          <textarea id="comments" name="comments" rows="5"></textarea>
+          <textarea
+            id="comments"
+            name="comments"
+            placeholder="Comments"
+            rows="4"
+          ></textarea>
 
           <button type="submit">Submit</button>
         </form>
