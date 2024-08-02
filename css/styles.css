@@ -192,3 +192,19 @@ button:hover {
   text-align: center;
   margin-top: 10px;
 }
+
+.map-section {
+  padding: 20px;
+}
+
+.map-box {
+  margin: 30px auto;
+  max-width: max-content;
+}
+
+.map-container {
+  max-width: max-content;
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 10px;
+  overflow: hidden;
+}
