@@ -12,9 +12,10 @@
 
     <style>
       .container {
-        width: 80%;
+        padding: 25px;
         margin: auto;
         overflow: hidden;
+        max-width: 1100px;
       }
       .contact-section {
         padding: 20px 0;
@@ -53,7 +54,6 @@
       }
       .calendar-container {
         width: 400px;
-        margin-top: 20px;
         border: 1px solid #ddd;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
@@ -62,6 +62,7 @@
       }
 
       .selected-date {
+        display: none;
         margin-top: 10px;
         font-weight: bold;
         color: #2e7d32;
@@ -127,6 +128,33 @@
       .flatpickr-days {
         width: 100%;
       }
+
+      .book-h1 {
+        font-size: 40px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .ap-container {
+        display: flex;
+        padding-top: 20px;
+      }
+      .ap-content {
+        flex-grow: 1;
+      }
+      .book-button {
+        display: none;
+        padding: 10px;
+        background: #4caf50;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+        margin-top: 12px;
+      }
+      .visible {
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -146,12 +174,16 @@
     </header>
 
     <div class="container">
-      <div>
-        <h1>Book an appointment</h1>
+      <div class="ap-container">
+        <div class="ap-content">
+          <h1 class="book-h1">Book an appointment</h1>
+          <p></p>
+          <div class="selected-date" id="selectedDate">Selected Date: None</div>
+          <button class="book-button" id="book-btn">Book Appointment</button>
+        </div>
         <div class="calendar-container">
           <div id="staticCalendar"></div>
         </div>
-        <div class="selected-date" id="selectedDate">Selected Date: None</div>
 
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
         <script>
@@ -160,6 +192,8 @@
             dateFormat: "Y-m-d",
             minDate: "today",
             onChange: function (selectedDates, dateStr, instance) {
+              document.getElementById("selectedDate").classList.add("visible");
+              document.getElementById("book-btn").classList.add("visible");
               document.getElementById(
                 "selectedDate"
               ).textContent = `Selected Date: ${dateStr}`;
