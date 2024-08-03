@@ -229,6 +229,7 @@ button:hover {
   background-color: #4caf50;
   color: white;
   padding: 16px;
+  border: 1px solid rgb(15, 124, 65);
   border-radius: 4px;
   text-align: center;
   z-index: 1;
