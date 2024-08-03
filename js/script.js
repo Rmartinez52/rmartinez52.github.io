@@ -1,11 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("estimateForm");
+  const estimateForm = document.getElementById("estimateForm");
+  const contactForm = document.getElementById("contactForm");
 
-  if (form) {
-    form.addEventListener("submit", function (e) {
+  if (estimateForm) {
+    estimateForm.addEventListener("submit", function (e) {
       e.preventDefault();
       console.log("Submitted");
       showToast("Form submitted successfully!");
+    });
+  } else if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      console.log("Submitted");
+      contactForm.reset();
+      showToast("Message Recieved! We'll get back soon");
     });
   } else {
     console.error("Form with id 'estimateForm' not found");
