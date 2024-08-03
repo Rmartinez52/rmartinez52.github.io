@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const estimateForm = document.getElementById("estimateForm");
   const contactForm = document.getElementById("contactForm");
   const bookBtn = document.getElementById("book-btn");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("show");
+  });
 
   if (estimateForm) {
     estimateForm.addEventListener("submit", function (e) {

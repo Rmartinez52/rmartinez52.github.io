@@ -50,23 +50,63 @@ nav {
   margin: auto;
 }
 
-nav ul {
+.nav-links {
   list-style-type: none;
   padding: 0;
   display: flex;
   justify-content: center;
   margin: 0;
+  z-index: 10;
 }
 
-nav ul li {
+.nav-links li {
   margin: 0 15px;
 }
 
-nav ul li a {
+.nav-links li a {
   color: #fff;
   text-decoration: none;
   padding: 15px 0;
   display: block;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.menu-toggle:hover {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #333;
+    padding: 20px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
 }
 
 .main {
