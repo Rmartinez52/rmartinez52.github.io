@@ -45,7 +45,7 @@
 
       .slide img {
         width: 100%;
-        max-height: 400px;
+        height: 400px;
         object-fit: cover;
       }
 
@@ -86,6 +86,8 @@
         flex-wrap: wrap;
         gap: 20px;
         text-align: center;
+        margin: auto;
+        padding: 0;
         margin-top: 10px;
         justify-content: center;
         list-style: none;
@@ -98,6 +100,12 @@
         width: calc(33.333% - 20px);
         min-width: 200px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .work-h {
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: 45px;
       }
 
       @media only screen and (max-width: 300px) {
@@ -126,9 +134,10 @@
 
     <div class="container">
       <div class="portfolio-section slideshow-container">
+        <h1 class="work-h">OUR WORK</h1>
         <div class="portfolio-item slide">
-          <img src="img/lawncare1.jpg" alt="Project 1" />
           <h2>LAWNCARE 1</h2>
+          <img src="img/lawncare1.jpg" alt="Project 1" />
           <p>
             This lawncare project showcases a beautifully manicured lawn that
             demonstrates the high-quality services provided by our lawn care
@@ -145,8 +154,8 @@
           </ul>
         </div>
         <div class="portfolio-item slide">
-          <img src="img/lawncare2.jpg" alt="Project 2" />
           <h2>LAWNCARE 2</h2>
+          <img src="img/lawncare2.jpg" alt="Project 2" />
           <p>
             This lawncare project showcases a well-maintained residential lawn,
             highlighting the excellent results achieved by our lawn care team.
@@ -163,8 +172,8 @@
           </ul>
         </div>
         <div class="portfolio-item slide">
-          <img src="img/landscape1.jpg" alt="Project 3" />
           <h2>LANDSCAPE 1</h2>
+          <img src="img/landscape1.jpg" alt="Project 3" />
           <p>
             This image highlights a beautifully landscaped backyard, showcasing
             the exceptional quality and care provided by our lawn care and
@@ -180,8 +189,8 @@
           </ul>
         </div>
         <div class="portfolio-item slide">
-          <img src="img/landscape2.jpg" alt="Project 4" />
           <h2>LANDSCAPE 2</h2>
+          <img src="img/landscape2.jpg" alt="Project 4" />
           <p>
             Description of the third project showcasing the lawn care or
             landscaping work. Include details about the services provided, the
