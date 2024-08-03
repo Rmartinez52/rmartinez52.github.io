@@ -15,7 +15,19 @@ document.addEventListener("DOMContentLoaded", function () {
 function showToast(message) {
   const toast = document.createElement("div");
   toast.className = "toast";
-  toast.textContent = message;
+
+  const messageSpan = document.createElement("span");
+  messageSpan.textContent = message;
+
+  const closeButton = document.createElement("span");
+  closeButton.innerHTML = "&times;";
+  closeButton.className = "toast-close";
+  closeButton.onclick = function () {
+    closeToast(toast);
+  };
+
+  toast.appendChild(messageSpan);
+  toast.appendChild(closeButton);
 
   document.body.appendChild(toast);
 
@@ -24,9 +36,17 @@ function showToast(message) {
   toast.classList.add("show");
 
   setTimeout(() => {
-    toast.classList.remove("show");
-    setTimeout(() => {
+    if (document.body.contains(toast)) {
+      closeToast(toast);
+    }
+  }, 5000);
+}
+
+function closeToast(toast) {
+  toast.classList.remove("show");
+  setTimeout(() => {
+    if (document.body.contains(toast)) {
       document.body.removeChild(toast);
-    }, 500);
-  }, 3000);
+    }
+  }, 500);
 }

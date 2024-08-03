@@ -236,9 +236,23 @@ button:hover {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .toast.show {
   visibility: visible;
   opacity: 1;
+}
+
+.toast-close {
+  cursor: pointer;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.toast-close:hover {
+  color: #f1f1f1;
 }
