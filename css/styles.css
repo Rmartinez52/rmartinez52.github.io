@@ -120,6 +120,10 @@ nav {
   .service-cards {
     justify-content: center;
   }
+
+  .slide {
+    padding: 30px 10px !important;
+  }
 }
 
 .main {
