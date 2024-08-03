@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     estimateForm.addEventListener("submit", function (e) {
       e.preventDefault();
       console.log("Submitted");
-      showToast("Form submitted successfully!");
+      showToast("Success! You'll recieve an estimate shortly.");
     });
   } else if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
