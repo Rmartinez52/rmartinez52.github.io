@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Lawn Care</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <style>
       .container {
         width: 80%;
@@ -108,11 +114,18 @@
         font-size: 45px;
       }
 
-      @media only screen and (max-width: 300px) {
-        .prev,
-        .next {
-          font-size: 11px;
-        }
+      .carousel-item {
+        padding: 20px 0;
+      }
+
+      .carousel-inner {
+        background-color: #ecffed;
+        border-radius: 15px;
+        border: 1px solid rgb(169, 169, 169);
+      }
+
+      .slide-content {
+        padding: 18px;
       }
     </style>
   </head>
@@ -120,7 +133,7 @@
     <header>
       <nav>
         <a href="/" class="head-link">
-          <h1>CARILLO</h1>
+          <h1 class="nav-h">CARILLO</h1>
         </a>
         <ul>
           <li><a href="/">HOME</a></li>
@@ -133,79 +146,118 @@
     </header>
 
     <div class="container">
-      <div class="portfolio-section slideshow-container">
-        <h1 class="work-h">OUR WORK</h1>
-        <div class="portfolio-item slide">
-          <h2>LAWNCARE 1</h2>
-          <img src="img/lawncare1.jpg" alt="Project 1" />
-          <p>
-            This lawncare project showcases a beautifully manicured lawn that
-            demonstrates the high-quality services provided by our lawn care
-            team. The lush, green grass is impeccably maintained, with precise
-            and even mowing lines that highlight the professional craftsmanship
-            and attention to detail we bring to every project.
-          </p>
-          <h2>SERVICES PROVIDED</h2>
-          <ul class="card-container">
-            <li class="card">MOWING AND LAWN MAINTENANCE</li>
-            <li class="card">FERTILIZATION AND WEED CONTROL</li>
-            <li class="card">EDGING AND TRIMMING</li>
-            <li class="card">AERATION AND SOIL HEALTH</li>
-          </ul>
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h2>LAWNCARE 1</h2>
+            <img src="img/lawncare1.jpg" alt="Project 1" />
+            <div class="slide-content">
+              <p>
+                This lawncare project showcases a beautifully manicured lawn
+                that demonstrates the high-quality services provided by our lawn
+                care team. The lush, green grass is impeccably maintained, with
+                precise and even mowing lines that highlight the professional
+                craftsmanship and attention to detail we bring to every project.
+              </p>
+              <h4>SERVICES PROVIDED</h4>
+              <ul class="card-container">
+                <li class="card">MOWING AND LAWN MAINTENANCE</li>
+                <li class="card">FERTILIZATION AND WEED CONTROL</li>
+                <li class="card">EDGING AND TRIMMING</li>
+                <li class="card">AERATION AND SOIL HEALTH</li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <h2>LAWNCARE 2</h2>
+            <img src="img/lawncare2.jpg" alt="Project 2" />
+            <div class="slide-content">
+              <p>
+                This lawncare project showcases a well-maintained residential
+                lawn, highlighting the excellent results achieved by our lawn
+                care team. The lush green grass, precise mowing lines, and
+                overall tidy appearance are a testament to the quality and care
+                we provide to our clients.
+              </p>
+              <h4>SERVICES PROVIDED</h4>
+              <ul class="card-container">
+                <li class="card">REGULAR LAWN MOWING</li>
+                <li class="card">FERTILIZATION AND WEED CONTROL</li>
+                <li class="card">EDGING AND TRIMMING</li>
+                <li class="card">TREE CARE AND MULCHING</li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <h2>LANDSCAPE 1</h2>
+            <img src="img/landscape1.jpg" alt="Project 3" />
+            <div class="slide-content">
+              <p>
+                This image highlights a beautifully landscaped backyard,
+                showcasing the exceptional quality and care provided by our lawn
+                care and landscaping team. The well-maintained lawn and expertly
+                mulched garden beds create a harmonious and inviting outdoor
+                space.
+              </p>
+              <h4>SERVICES PROVIDED</h4>
+              <ul class="card-container">
+                <li class="card">MOWING AND LAWN MAINTENANCE</li>
+                <li class="card">FERTILIZATION AND WEED CONTROL</li>
+                <li class="card">EDGING AND TRIMMING</li>
+                <li class="card">AERATION AND SOIL HEALTH</li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <h2>LANDSCAPE 2</h2>
+            <img src="img/landscape2.jpg" alt="Project 4" />
+            <div class="slide-content">
+              <p>
+                Description of the third project showcasing the lawn care or
+                landscaping work. Include details about the services provided,
+                the results achieved, and any notable aspects of the project.
+              </p>
+              <h4>SERVICES PROVIDED</h4>
+              <ul class="card-container">
+                <li class="card">MOWING AND LAWN MAINTENANCE</li>
+                <li class="card">FERTILIZATION AND WEED CONTROL</li>
+                <li class="card">EDGING AND TRIMMING</li>
+                <li class="card">AERATION AND SOIL HEALTH</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="portfolio-item slide">
-          <h2>LAWNCARE 2</h2>
-          <img src="img/lawncare2.jpg" alt="Project 2" />
-          <p>
-            This lawncare project showcases a well-maintained residential lawn,
-            highlighting the excellent results achieved by our lawn care team.
-            The lush green grass, precise mowing lines, and overall tidy
-            appearance are a testament to the quality and care we provide to our
-            clients.
-          </p>
-          <h2>SERVICES PROVIDED</h2>
-          <ul class="card-container">
-            <li class="card">REGULAR LAWN MOWING</li>
-            <li class="card">FERTILIZATION AND WEED CONTROL</li>
-            <li class="card">EDGING AND TRIMMING</li>
-            <li class="card">TREE CARE AND MULCHING</li>
-          </ul>
-        </div>
-        <div class="portfolio-item slide">
-          <h2>LANDSCAPE 1</h2>
-          <img src="img/landscape1.jpg" alt="Project 3" />
-          <p>
-            This image highlights a beautifully landscaped backyard, showcasing
-            the exceptional quality and care provided by our lawn care and
-            landscaping team. The well-maintained lawn and expertly mulched
-            garden beds create a harmonious and inviting outdoor space.
-          </p>
-          <h2>SERVICES PROVIDED</h2>
-          <ul class="card-container">
-            <li class="card">MOWING AND LAWN MAINTENANCE</li>
-            <li class="card">FERTILIZATION AND WEED CONTROL</li>
-            <li class="card">EDGING AND TRIMMING</li>
-            <li class="card">AERATION AND SOIL HEALTH</li>
-          </ul>
-        </div>
-        <div class="portfolio-item slide">
-          <h2>LANDSCAPE 2</h2>
-          <img src="img/landscape2.jpg" alt="Project 4" />
-          <p>
-            Description of the third project showcasing the lawn care or
-            landscaping work. Include details about the services provided, the
-            results achieved, and any notable aspects of the project.
-          </p>
-          <h2>SERVICES PROVIDED</h2>
-          <ul class="card-container">
-            <li class="card">MOWING AND LAWN MAINTENANCE</li>
-            <li class="card">FERTILIZATION AND WEED CONTROL</li>
-            <li class="card">EDGING AND TRIMMING</li>
-            <li class="card">AERATION AND SOIL HEALTH</li>
-          </ul>
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
     <script>
@@ -235,5 +287,21 @@
     <footer>
       <p>&copy; 2014 CARILLO LAWN & LANDSCAPING</p>
     </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
