@@ -116,6 +116,10 @@ nav {
     align-items: center;
     text-align: center;
   }
+
+  .service-cards {
+    justify-content: center;
+  }
 }
 
 .main {
