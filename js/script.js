@@ -1,22 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
   const estimateForm = document.getElementById("estimateForm");
   const contactForm = document.getElementById("contactForm");
+  const bookBtn = document.getElementById("book-btn");
 
   if (estimateForm) {
     estimateForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      console.log("Submitted");
-      showToast("Success! You'll recieve an estimate shortly.");
+      console.log("Estimate Form Submitted");
+      showToast("Success! You'll receive an estimate shortly.");
     });
-  } else if (contactForm) {
+  }
+
+  if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      console.log("Submitted");
+      console.log("Contact Form Submitted");
       contactForm.reset();
-      showToast("Message Recieved! We'll get back soon");
+      showToast("Message Received! We'll get back soon");
     });
-  } else {
-    console.error("Form with id 'estimateForm' not found");
+  }
+
+  if (bookBtn) {
+    bookBtn.addEventListener("click", function () {
+      console.log("Book Now Clicked");
+      showToast("Appointment Booked Successfully!");
+    });
   }
 });
 
