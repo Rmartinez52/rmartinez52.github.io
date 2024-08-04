@@ -87,7 +87,6 @@ nav {
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
-    align-self: flex-end;
   }
 
   .nav-links {
