@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: #04230a;
   color: #fff;
   padding: 0px 20px;
 }
@@ -25,7 +25,8 @@ header {
 }
 
 #logo {
-  width: 150px;
+  width: 90px;
+  margin: 10px 0;
   height: auto;
 }
 
