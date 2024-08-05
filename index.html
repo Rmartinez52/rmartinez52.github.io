@@ -65,7 +65,7 @@
       <div class="map-section">
         <div class="map-box">
           <h1>Our Location</h1>
-          <div id="map-container"></div>
+          <div id="map-container" style="width: 500px; height: 400px"></div>
           <script>
             function initMap() {
               const location = { lat: 37.7749, lng: -122.4194 };
@@ -78,7 +78,7 @@
                 }
               );
 
-              const marker = new google.maps.marker.AdvancedMarkerElement({
+              const marker = new google.maps.Marker({
                 position: location,
                 map: map,
               });
