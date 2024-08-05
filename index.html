@@ -62,9 +62,48 @@
           </form>
         </div>
       </div>
-    </div>
+      <div class="map-section">
+        <div class="map-box">
+          <h1>Our Location</h1>
+          <div id="map-container"></div>
+          <script>
+            function initMap() {
+              const location = { lat: 37.7749, lng: -122.4194 };
 
-    <section id="about"></section>
+              const map = new google.maps.Map(
+                document.getElementById("map-container"),
+                {
+                  zoom: 14,
+                  center: location,
+                }
+              );
+
+              const marker = new google.maps.marker.AdvancedMarkerElement({
+                position: location,
+                map: map,
+              });
+            }
+          </script>
+          <script
+            async
+            defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDQa2BT9O8LPvkefHUlor9npIXeYFwTQk&callback=initMap"
+          ></script>
+
+          <!-- <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019546342804!2d-122.40155438423006!3d37.7850687797574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064d7d40c33%3A0x826b6df0f9bbf1cb!2s1%20Market%20St%2C%20San%20Francisco%2C%20CA%2094105%2C%20USA!5e0!3m2!1sen!2s!4v1691162400000!5m2!1sen!2s"
+              width="600"
+              height="350"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div> -->
+        </div>
+      </div>
+    </div>
 
     <footer>
       <p>&copy; 2014 CARILLO LAWN & LANDSCAPING</p>
