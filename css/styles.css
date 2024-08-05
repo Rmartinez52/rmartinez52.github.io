@@ -276,6 +276,9 @@ button:hover {
 .map-box {
   margin: 30px auto;
   max-width: max-content;
+  color: white;
+  position: relative;
+  z-index: 3;
 }
 
 .map-container {
