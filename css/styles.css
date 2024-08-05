@@ -281,8 +281,8 @@ button:hover {
   z-index: 3;
 }
 
-.map-container {
-  max-width: max-content;
+#map-container {
+  width: 500px;
   border: 1px solid rgb(177, 177, 177);
   border-radius: 10px;
   overflow: hidden;
