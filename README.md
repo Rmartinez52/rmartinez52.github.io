@@ -4,19 +4,17 @@ Description: The Lawn Care Website is for a friend and his business. The site pr
 
 Features:
 
-	•	User registration and login (basic authentication)
 	•	Service listings with descriptions and prices
 	•	Booking system for scheduling lawn care services
-	•	User dashboard to manage bookings and view service history
-	•	Review system for users to leave feedback on services
+	•	Slideshow showcasing the portfolio of previous work
 
 Technical Insight
 
 Tools and Technologies:
 
-	•	Frontend: HTML, CSS
+	•	Frontend: HTML, CSS, JAVASCRIPT
 	•	Database: MongoDB
-	•	APIs: Integration with Google Maps API for location services, Payment Gateway API for handling transactions
+	•	APIs: Integration with Google Maps API for location services
 
 Incorporation Method:
 
@@ -30,11 +28,9 @@ Optional Visual Aids
 
 Wireframes:
 
-	•	User registration and login pages
 	•	Service listing page
 	•	Booking form
-	•	User dashboard
-	•	Review system interface
+	•	Slideshow
 
 Diagrams:
 
@@ -46,8 +42,6 @@ Current Progress
 
 	1.	Service Listings: Initial setup of service listings with descriptions and prices.
 	2.	Booking System: Basic booking form is created.
-	3.	User Dashboard: Initial version of the dashboard to view and manage bookings.
-	4.	Review System: Basic functionality for users to leave feedback on services.
 
 Next Steps
 
