@@ -34,12 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-function showToast(message) {
+function showToast(finalMessage) {
   const toast = document.createElement("div");
   toast.className = "toast";
+  toast.style.backgroundColor = "#4c81af";
 
   const messageSpan = document.createElement("span");
-  messageSpan.textContent = message;
+  messageSpan.textContent = "Loading...";
 
   const closeButton = document.createElement("span");
   closeButton.innerHTML = "&times;";
@@ -58,10 +59,15 @@ function showToast(message) {
   toast.classList.add("show");
 
   setTimeout(() => {
+    messageSpan.textContent = finalMessage;
+    toast.style.backgroundColor = "";
+  }, 2000);
+
+  setTimeout(() => {
     if (document.body.contains(toast)) {
       closeToast(toast);
     }
-  }, 5000);
+  }, 7000);
 }
 
 function closeToast(toast) {
