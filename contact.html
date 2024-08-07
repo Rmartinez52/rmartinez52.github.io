@@ -175,6 +175,10 @@
       .visible {
         display: block;
       }
+      #map-container {
+        width: 400px;
+        border-radius: 14px 14px 0px 0px;
+      }
     </style>
   </head>
   <body>
@@ -230,7 +234,7 @@
         </script>
       </div>
       <div class="contact-section">
-        <h1 class="book-h1">Contact Us</h1>
+        <h1 class="book-h1">Contact Us Now</h1>
         <form class="contact-form" id="contactForm">
           <input
             type="text"
@@ -267,6 +271,55 @@
 
           <button type="submit">Submit</button>
         </form>
+        <div class="contact-map">
+          <div>
+            <div id="map-container" style="width: 350px; height: 300px"></div>
+            <script>
+              function initMap() {
+                const location = { lat: 38.4534, lng: -85.6691 };
+
+                const map = new google.maps.Map(
+                  document.getElementById("map-container"),
+                  {
+                    zoom: 9,
+                    center: location,
+                  }
+                );
+
+                const marker = new google.maps.Marker({
+                  position: location,
+                  map: map,
+                });
+
+                const circle = new google.maps.Circle({
+                  map: map,
+                  radius: 24000,
+                  fillColor: "#FF0000",
+                  fillOpacity: 0.35,
+                  strokeColor: "#FF0000",
+                  strokeOpacity: 0.6,
+                  strokeWeight: 1,
+                  center: location,
+                });
+
+                const bounds = new google.maps.LatLngBounds();
+                circle.getPath().forEach(function (latLng) {
+                  bounds.extend(latLng);
+                });
+                map.fitBounds(bounds);
+              }
+            </script>
+            <script
+              async
+              defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDQa2BT9O8LPvkefHUlor9npIXeYFwTQk&callback=initMap"
+            ></script>
+          </div>
+          <div class="cm-content">
+            <h2>CARILLO LAWN & LANDSCAPING</h2>
+            <p>Charlestown, Indiana 47111</p>
+          </div>
+        </div>
       </div>
     </div>
 
