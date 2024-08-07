@@ -17,6 +17,8 @@
         overflow: hidden;
       }
       .contact-section {
+        display: flex;
+        flex-direction: row;
         padding: 40px 20px;
         text-align: center;
         background-color: hsl(147, 100%, 21%);
@@ -234,43 +236,45 @@
         </script>
       </div>
       <div class="contact-section">
-        <h1 class="book-h1">Contact Us Now</h1>
-        <form class="contact-form" id="contactForm">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            required
-          />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email"
-            required
-          />
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Phone Number"
-            required
-          />
-          <select id="services" name="services" required>
-            <option value="services">Services of Interest</option>
-            <option value="lawn-care">Lawn Care</option>
-            <option value="landscaping">Landscaping</option>
-          </select>
-          <textarea
-            id="comments"
-            name="comments"
-            placeholder="Comments"
-            rows="4"
-          ></textarea>
+        <div>
+          <h1 class="book-h1">Contact Us Now</h1>
+          <form class="contact-form" id="contactForm">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone Number"
+              required
+            />
+            <select id="services" name="services" required>
+              <option value="services">Services of Interest</option>
+              <option value="lawn-care">Lawn Care</option>
+              <option value="landscaping">Landscaping</option>
+            </select>
+            <textarea
+              id="comments"
+              name="comments"
+              placeholder="Comments"
+              rows="4"
+            ></textarea>
 
-          <button type="submit">Submit</button>
-        </form>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
         <div class="contact-map">
           <div>
             <div id="map-container" style="width: 350px; height: 300px"></div>
@@ -318,6 +322,17 @@
           <div class="cm-content">
             <h2>CARILLO LAWN & LANDSCAPING</h2>
             <p>Charlestown, Indiana 47111</p>
+
+            <h3>HOURS</h3>
+            <ul>
+              <li>Mon: 9:00AM-4:00PM</li>
+              <li>Tue: 9:00AM-4:00PM</li>
+              <li>Wed: 9:00AM-4:00PM</li>
+              <li>Thu: 9:00AM-4:00PM</li>
+              <li>Fri: 9:00AM-4:00PM</li>
+              <li>Sat: Closed</li>
+              <li>Sun: 9:00AM-4:00PM</li>
+            </ul>
           </div>
         </div>
       </div>
