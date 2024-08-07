@@ -44,12 +44,12 @@
               <div id="map-container" style="width: 400px; height: 300px"></div>
               <script>
                 function initMap() {
-                  const location = { lat: 37.7749, lng: -122.4194 };
+                  const location = { lat: 38.4534, lng: -85.6691 };
 
                   const map = new google.maps.Map(
                     document.getElementById("map-container"),
                     {
-                      zoom: 12,
+                      zoom: 9,
                       center: location,
                     }
                   );
@@ -61,7 +61,7 @@
 
                   const circle = new google.maps.Circle({
                     map: map,
-                    radius: 5000,
+                    radius: 24000,
                     fillColor: "#FF0000",
                     fillOpacity: 0.35,
                     strokeColor: "#FF0000",
@@ -70,7 +70,6 @@
                     center: location,
                   });
 
-                  // Fit the map to the circle
                   const bounds = new google.maps.LatLngBounds();
                   circle.getPath().forEach(function (latLng) {
                     bounds.extend(latLng);
