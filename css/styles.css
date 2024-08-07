@@ -369,6 +369,21 @@ button:hover {
   width: 80%;
 }
 
+.book-button {
+  display: none;
+  padding: 10px;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.book-form {
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -421,5 +436,10 @@ button:hover {
 
   .contact-section {
     flex-direction: column;
+  }
+
+  .book-button {
+    margin: auto;
+    margin-top: 12px;
   }
 }

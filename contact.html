@@ -24,6 +24,7 @@
         overflow: hidden;
         background-color: #f0f8f1;
         min-width: 390px;
+        margin-top: 12px;
       }
 
       .selected-date {
@@ -117,22 +118,18 @@
       .ap-content p {
         padding-right: 24px;
       }
-      .book-button {
-        display: none;
-        padding: 10px;
-        background: #4caf50;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        font-weight: 700;
-        margin-top: 12px;
-      }
       .visible {
         display: block;
       }
       #map-container {
         width: 400px;
         border-radius: 14px 14px 0px 0px;
+      }
+      #book-form input {
+        width: 40%;
+      }
+      #address {
+        width: 80% !important;
       }
     </style>
   </head>
@@ -159,12 +156,34 @@
           <h1 class="book-h1">Book an Appointment</h1>
           <p>
             Booking an appointment is easy and convenient—simply choose a time
-            that works for you, and click the "Book Now" button. Our flexible
-            scheduling ensures that we can meet your needs promptly. Let us take
-            care of your lawn, so you can enjoy a beautiful, healthy yard all
-            year round. Schedule your appointment today and see the difference
-            our personalized lawn care solutions can make!
+            that works for you, fill in the essential details and click the
+            "Book Now" button.
           </p>
+          <div id="book-form">
+            <div>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <input
+              type="tel"
+              id="address"
+              name="address"
+              placeholder="Address"
+              required
+            />
+          </div>
           <div class="selected-date" id="selectedDate">Selected Date: None</div>
           <button class="book-button" id="book-btn">Book Now</button>
         </div>
@@ -181,6 +200,7 @@
             onChange: function (selectedDates, dateStr, instance) {
               document.getElementById("selectedDate").classList.add("visible");
               document.getElementById("book-btn").classList.add("visible");
+              document.getElementById("book-form").classList.add("visible");
               document.getElementById(
                 "selectedDate"
               ).textContent = `Selected Date: ${dateStr}`;
