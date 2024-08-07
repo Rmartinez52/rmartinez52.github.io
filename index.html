@@ -88,17 +88,42 @@
         <div class="estimate-form">
           <h2>Fill in your details</h2>
           <form id="estimateForm">
-            <input type="text" id="name" name="name" placeholder="Name" />
-            <input type="email" id="email" name="email" placeholder="Email" />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
             <input
               type="text"
               id="address"
               name="address"
               placeholder="Address"
+              required
             />
-            <input type="text" id="state" name="state" placeholder="State" />
-            <input type="text" id="zip" name="zip" placeholder="Zip Code" />
-            <select id="service" name="service">
+            <input
+              type="text"
+              id="state"
+              name="state"
+              placeholder="State"
+              required
+            />
+            <input
+              type="text"
+              id="zip"
+              name="zip"
+              placeholder="Zip Code"
+              required
+            />
+            <select id="service" name="service" required>
               <option value="type">Type of Service</option>
               <option value="lawn">Lawn Care</option>
               <option value="landscape">Landscape Design</option>

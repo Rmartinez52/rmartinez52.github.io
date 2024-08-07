@@ -159,7 +159,7 @@
             that works for you, fill in the essential details and click the
             "Book Now" button.
           </p>
-          <div id="book-form">
+          <form id="book-form">
             <div>
               <input
                 type="text"
@@ -183,9 +183,13 @@
               placeholder="Address"
               required
             />
-          </div>
-          <div class="selected-date" id="selectedDate">Selected Date: None</div>
-          <button class="book-button" id="book-btn">Book Now</button>
+            <div class="selected-date" id="selectedDate">
+              Selected Date: None
+            </div>
+            <button type="submit" class="book-button" id="book-btn">
+              Book Now
+            </button>
+          </form>
         </div>
         <div class="calendar-container">
           <div id="staticCalendar"></div>
