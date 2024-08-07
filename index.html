@@ -39,6 +39,52 @@
         <div class="estimate-content">
           <h1>Request an Estimate</h1>
           <p>Message us and we'll get back to you as soon as possible!</p>
+          <div class="map-section">
+            <div class="map-box">
+              <div id="map-container" style="width: 400px; height: 300px"></div>
+              <script>
+                function initMap() {
+                  const location = { lat: 37.7749, lng: -122.4194 };
+
+                  const map = new google.maps.Map(
+                    document.getElementById("map-container"),
+                    {
+                      zoom: 12,
+                      center: location,
+                    }
+                  );
+
+                  const marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                  });
+
+                  const circle = new google.maps.Circle({
+                    map: map,
+                    radius: 5000,
+                    fillColor: "#FF0000",
+                    fillOpacity: 0.35,
+                    strokeColor: "#FF0000",
+                    strokeOpacity: 0.6,
+                    strokeWeight: 1,
+                    center: location,
+                  });
+
+                  // Fit the map to the circle
+                  const bounds = new google.maps.LatLngBounds();
+                  circle.getPath().forEach(function (latLng) {
+                    bounds.extend(latLng);
+                  });
+                  map.fitBounds(bounds);
+                }
+              </script>
+              <script
+                async
+                defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDQa2BT9O8LPvkefHUlor9npIXeYFwTQk&callback=initMap"
+              ></script>
+            </div>
+          </div>
         </div>
         <div class="estimate-form">
           <h2>Fill in your details</h2>
@@ -60,53 +106,6 @@
             </select>
             <button type="submit" class="btn">Send</button>
           </form>
-        </div>
-      </div>
-      <div class="map-section">
-        <div class="map-box">
-          <h1>Our Service Area</h1>
-          <div id="map-container" style="width: 500px; height: 400px"></div>
-          <script>
-            function initMap() {
-              const location = { lat: 37.7749, lng: -122.4194 };
-
-              const map = new google.maps.Map(
-                document.getElementById("map-container"),
-                {
-                  zoom: 12,
-                  center: location,
-                }
-              );
-
-              const marker = new google.maps.Marker({
-                position: location,
-                map: map,
-              });
-
-              const circle = new google.maps.Circle({
-                map: map,
-                radius: 5000,
-                fillColor: "#FF0000",
-                fillOpacity: 0.35,
-                strokeColor: "#FF0000",
-                strokeOpacity: 0.6,
-                strokeWeight: 1,
-                center: location,
-              });
-
-              // Fit the map to the circle
-              const bounds = new google.maps.LatLngBounds();
-              circle.getPath().forEach(function (latLng) {
-                bounds.extend(latLng);
-              });
-              map.fitBounds(bounds);
-            }
-          </script>
-          <script
-            async
-            defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDQa2BT9O8LPvkefHUlor9npIXeYFwTQk&callback=initMap"
-          ></script>
         </div>
       </div>
     </div>
