@@ -4,7 +4,7 @@ Description: The Lawn Care Website is for a friend and his business. The site pr
 
 Features:
 
-	•	Service listings with descriptions and prices
+	•	Service listings with descriptions
 	•	Booking system for scheduling lawn care services
 	•	Slideshow showcasing the portfolio of previous work
 
@@ -22,7 +22,6 @@ Incorporation Method:
 	•	The backend utilizes Node.js and Express.js to handle server-side logic, user authentication, and API requests.
 	•	MongoDB is used for storing user data, service listings, and booking information.
 	•	The Google Maps API is integrated to help users find local lawn care services.
-	•	A Payment Gateway API is used to handle secure transactions for service bookings.
 
 Optional Visual Aids
 
@@ -40,7 +39,7 @@ Diagrams:
 
 Current Progress
 
-	1.	Service Listings: Initial setup of service listings with descriptions and prices.
+	1.	Service Listings: Initial setup of service listings with descriptions
 	2.	Booking System: Basic booking form is created.
 
 Next Steps
