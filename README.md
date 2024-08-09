@@ -13,7 +13,6 @@ Technical Insight
 Tools and Technologies:
 
 	•	Frontend: HTML, CSS, JAVASCRIPT
-	•	Database: MongoDB
 	•	APIs: Integration with Google Maps API for location services
 
 Incorporation Method:
